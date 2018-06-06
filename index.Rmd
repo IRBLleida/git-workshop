@@ -50,3 +50,6 @@ Basic git commands.
 6. Switch to master branch.
 7. Merge branches.
 
+
+## Use case
+Use case to test it.
