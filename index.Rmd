@@ -1,13 +1,27 @@
 ---
 title: "Git Workshop"
-author: "Pau Balaguer<br />Jordi Vilaplana"
+author: "Pau Balaguer - pbalaguer@irblleida.cat<br />Jordi Vilaplana - jvilaplana@irblleida.cat"
 date: "6/6/2018"
-output: html_document
+output:
+    html_document:
+        theme: united  # many options for theme, this one is my favorite.
+        highlight: tango
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+```{r init, echo=FALSE}
+htmltools::img(src = knitr::image_uri(file.path("gitfire.png")), alt = 'Git Workshop', style = 'position:absolute; top:10px; right:10px; padding:10px; width: 256px;')
+```
+
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300');
+
+body { font-family: 'Roboto Mono', monospace; }
+table.table { width: 100% !important; }
+</style>
 
 Git (mini)Workshop for statiticians.
 
@@ -38,19 +52,29 @@ Basic git commands.
 ### Start
 1. [Create a new repository](https://github.com/organizations/IRBLleida/repositories/new) on GitHub.
 2. Checkout the newly created repository in RStudio via `File - New Project ...`.
-3. Make changes, commit changes ...
-4. Push changes.
+3. Add `.DS_Store` to the `.gitignore` file.
+4. Make changes.
+5. Stage and `commit` changes.
+6. `push` changes.
 
-
+<hr />
+> 
+> Whenever I see a door that says "push", I always pull first, to avoid conflicts.
+> 
+ <hr />
+ 
 ### Work
-1. Pull changes.
-2. Make changes, commit changes ...
-3. Push changes.
+1. `pull` changes (this will avoid possible conflicts).
+2. Make changes.
+3. Stage and `commit` changes.
+4. `push` changes.
 
+The `push` will fail if someone has pushed changes after your last `pull`. In this case, we got ourselves a conflict.
+To resolve it, after the failed `push` do:
 
-### Conflicts
-1. Make changes, commit changes ...
-2. Push changes [Error in push]
-3. Pull changes.
-4. Resolve conflicts.
-5. Commit and push.
+5. `pull` changes.
+
+RStudio will try to resolve the conflicts automatically. However, if in both versions there are changes to the same lines of the file, RStudio will ask you to resolve these conflicts manually. To do this, you will need to manually check your file and modify it as you wish. When you are done, do:
+
+6. Stage and `commit` changes.
+7. `push` changes.
