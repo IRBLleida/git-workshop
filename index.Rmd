@@ -12,11 +12,10 @@ knitr::opts_chunk$set(echo = TRUE)
 Git (mini)Workshop for statiticians.
 
 ## Prerequisites
-Download and install git and GitHub Desktop and create a GitHub account.
+Download and install git and create a GitHub account.
 
 - [git](https://git-scm.com/downloads)
 - [GitHub Account](https://github.com/)
-- [GitHub Desktop](https://desktop.github.com/)
 
 
 ## Git Basics
@@ -26,30 +25,32 @@ Basic git commands.
 | ------- | ----------- |
 | `git init` | Create a new local repository. |
 | `git clone` | Clone an existing repository. |
-| `git add .` | Stage (add) all changed files, ready for commit. |
+| `git add -A` | Stage (add) all changed files, ready for commit. |
 | `git status` | List new or modified files not yet commited. |
 | `git commit -a` | Commit all local changes in tracked files. |
 | `git commit` | Commit previously staged files. |
-| `git branch -av` | List all existing branches. |
-| `git checkout <branch>` | Switch to a branch. |
-| `git branch <new-branch>` | Create a new branch. | 
-| `git merge <branch>` | Merge `<branch>` into current branch. |
 | `git push` | Publish local changes to GitHub. |
 | `git pull` | Download changes from GitHub. |
 
 
 ## Proposed git workflow
 
-![](https://nvie.com/img/main-branches@2x.png)
-
+### Start
 1. [Create a new repository](https://github.com/organizations/IRBLleida/repositories/new) on GitHub.
 2. Checkout the newly created repository in RStudio via `File - New Project ...`.
-3. Create a new branch using ... *[RStudio Git or GitHub Desktop??]*
-4. Make changes, commit changes ...
-5. Push changes.
-6. Switch to master branch.
-7. Merge branches.
+3. Make changes, commit changes ...
+4. Push changes.
 
 
-## Use case
-Use case to test it.
+### Work
+1. Pull changes.
+2. Make changes, commit changes ...
+3. Push changes.
+
+
+### Conflicts
+1. Make changes, commit changes ...
+2. Push changes [Error in push]
+3. Pull changes.
+4. Resolve conflicts.
+5. Commit and push.
