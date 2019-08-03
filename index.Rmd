@@ -70,11 +70,22 @@ Basic git commands.
 4. `push` changes.
 
 The `push` will fail if someone has pushed changes after your last `pull`. In this case, we got ourselves a conflict.
+
+![](push-fail.png)
+
 To resolve it, after the failed `push` do:
 
 5. `pull` changes.
 
 RStudio will try to resolve the conflicts automatically. However, if in both versions there are changes to the same lines of the file, RStudio will ask you to resolve these conflicts manually. To do this, you will need to manually check your file and modify it as you wish. When you are done, do:
 
+![](pull-conflicts.png)
+
 6. Stage and `commit` changes.
 7. `push` changes.
+
+<hr />
+
+<div style="width: 70%; margin-left: auto; margin-right: auto;">
+![](git-commits.png)
+</div>
